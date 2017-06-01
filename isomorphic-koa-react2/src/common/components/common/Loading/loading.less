@@ -1,0 +1,62 @@
+
+.loading-modal{
+	.ant-modal-footer,.ant-modal-close{
+		display: none;
+	}
+	.ant-modal-body{
+		padding:0;
+	}
+	.loading-modal-body{
+		padding:1.5rem 0;
+		font-size: 14px;
+		box-shadow: 1px 1px 10px #000;
+		text-align: center;
+		.icon{
+			font-size:0.6rem;
+			color:#FF6C07;
+		}
+	}
+}
+
+.loading {
+	display: inline-block;
+	animation: rotate 1s linear infinite;
+}
+
+//动画 进入
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+//动画 退出
+@keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+//旋转
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

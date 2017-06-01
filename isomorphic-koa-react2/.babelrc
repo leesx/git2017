@@ -1,0 +1,109 @@
+{
+    "presets": ["es2015", "stage-1", "stage-3", "react"],
+    "env": {
+        "development": {
+            "presets": ["react-hmre"],
+
+            "plugins": [
+							"transform-async-to-generator",
+							["react-transform", {
+               "transforms": [{
+                 "transform": "react-transform-hmr",
+                 // if you use React Native, pass "react-native" instead:
+                 "imports": ["react"],
+                 // this is important for Webpack HMR:
+                 "locals": ["module"]
+               }]}],
+							 ["transform-runtime", {
+								 "helpers": false,
+								 "polyfill": false,
+								 "regenerator": true,
+								 "moduleName": "babel-runtime"
+							 }]
+             ]
+        },
+        "production": {
+            "compact": true
+        },
+        "devnode": {
+          "plugins": [
+            ["antd"],
+            ["babel-plugin-transform-require-ignore", {
+              "extensions": [".jpg", ".png", ".gif"]
+            }],
+            ["css-modules-transform", {
+              "generateScopedName": "[name]_[local]__[hash:base64:5]",
+              "extensions": [".css", ".less"],
+              "camelCase": true,
+              "preprocessCss": "./less-require-hook.js"
+            }]
+          ]
+        },
+        "prodnode": {
+          "plugins": [
+            ["antd"],
+            ["babel-plugin-transform-require-ignore", {
+              "extensions": [".jpg", ".png", ".gif"]
+            }],
+            ["css-modules-transform", {
+              "generateScopedName": "_[hash:base64]",
+              "extensions": [".css", ".less"],
+              "camelCase": true,
+              "preprocessCss": "./less-require-hook.js"
+            }]
+          ]
+        }
+    },
+    "plugins": [
+        "transform-object-assign",
+        ["import", {
+          "libraryName": "antd",
+          "style": true,  // 'less'
+        }]
+    ]
+}
+
+
+
+// {
+//   "presets": ["react", "es2015","stage-1"],
+//   //在开发的时候才启用HMR和Catch Error
+//   "env": {
+//    "development": {
+//      "presets": ["react-hmre"],
+//      "plugins": [["react-transform", {
+//         "transforms": [{
+//           "transform": "react-transform-hmr",
+//           // if you use React Native, pass "react-native" instead:
+//           "imports": ["react"],
+//           // this is important for Webpack HMR:
+//           "locals": ["module"]
+//         }]
+//          // note: you can put more transforms into array
+//         // this is just one of them!
+//       }]]
+//    }
+//   }
+// }
+
+
+
+// {
+//   "presets": ["react","es2015", "stage-1"],
+//   "env": {
+//     // only enable it when process.env.NODE_ENV is 'development' or undefined
+//     "development": {
+//       "plugins": [["react-transform", {
+//         "transforms": [{
+//           "transform": "react-transform-hmr",
+//           // if you use React Native, pass "react-native" instead:
+//           "imports": ["react"],
+//           // this is important for Webpack HMR:
+//           "locals": ["module"]
+//         }]
+//         // note: you can put more transforms into array
+//         // this is just one of them!
+//       }]]
+//     }
+//   }
+// }
