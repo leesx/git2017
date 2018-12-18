@@ -23,7 +23,7 @@ module.exports = {
     } ,
     output: {
 				comments: false,
-        publicPath: 'http://api.mendianbao.hualala.com',
+        publicPath: 'http://api.leesx.com',
 				//path:path.join(__dirname, './'),
         filename: "static/scripts/[name].min.js",   //打包后输出index.js
         chunkFilename: 'static/scripts/page/[id].[name].chunk.js', // 按需加载的页面模块
