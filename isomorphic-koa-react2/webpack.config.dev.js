@@ -90,7 +90,7 @@ const webpackConfig = {
           manifest: require('./manifest.development.json'),
         }),
 				//extractCSS,
-        new webpack.BannerPlugin(`©Copyright Hualala inc. \n update: ${nowDateStr}`),
+        new webpack.BannerPlugin(`©Copyright Lwwsx inc. \n update: ${nowDateStr}`),
         new webpack.NoErrorsPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ],
