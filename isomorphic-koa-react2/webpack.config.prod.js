@@ -87,6 +87,6 @@ module.exports = {
           manifest: require('./manifest.production.json'),
         }),
         new ExtractTextPlugin("static/styles/default/[name].min.css", { allChunks: true }),
-        new webpack.BannerPlugin(`©Copyright Hualala inc. \n update: ${nowDateStr}`)
+        new webpack.BannerPlugin(`©Copyright Leesx inc. \n update: ${nowDateStr}`)
     ]
 };
