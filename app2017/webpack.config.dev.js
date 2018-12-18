@@ -95,7 +95,7 @@ const webpackConfig = {
 		    }),
 				//extractCSS,
 				new ExtractTextPlugin("static/styles/default/[name].css", { allChunks: true }),
-        new webpack.BannerPlugin(`©Copyright Hualala inc. \n update: ${nowDateStr}`),
+        new webpack.BannerPlugin(`©Copyright Leesx inc. \n update: ${nowDateStr}`),
         new webpack.NoErrorsPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ],
@@ -106,7 +106,7 @@ const webpackConfig = {
 				proxy: { // 跨域代理
             '/saas/order/': {
                 changeOrigin: true,
-                target: 'http://dohko.api.mendianbao.hualala.com',
+                target: 'http://xxxx.com',
                 secure: false,
             },
         },
