@@ -10,7 +10,6 @@
         "spec": "latest",
         "type": "tag"
       },
-      "E:\\hualala_proj\\yunpad\\mendianbao-api-portal\\src\\main\\resources\\front-end"
     ]
   ],
   "_cnpm_publish_time": 1469462982771,
@@ -46,7 +45,6 @@
   "_shasum": "5a389394549f23330875a3b150656574f8a9eb71",
   "_shrinkwrap": null,
   "_spec": "bootstrap",
-  "_where": "E:\\hualala_proj\\yunpad\\mendianbao-api-portal\\src\\main\\resources\\front-end",
   "author": {
     "name": "Twitter, Inc."
   },
