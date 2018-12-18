@@ -43,7 +43,7 @@ npm run debug:server
 #### 部署
 ```
 #!/bin/sh
-ls \platform || git clone http://git.hualala.com/hualala-fp-platform/platform.git
+ls \platform
 cd platform
 git checkout dev
 git pull
